@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(233, 233, 233);
+    color: #2b2b2b;
+    padding: 0px;
+    margin: 0px
+}
+
+div {
+    display: block;
+    height: 400px;
+    padding: 20px;
+    /* margin: 0px; */
+}
+
+#__next{
+    padding:0px
+}
+
+div.first {
+    background-color: rgb(200, 200, 255);
+}
+div.second {
+    background-color: rgb(200, 249, 255);
+}
+div.third {
+    background-color: rgb(255, 220, 200);
+}
