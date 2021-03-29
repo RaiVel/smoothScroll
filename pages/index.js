@@ -1,4 +1,7 @@
 const page = () => (
+
+    // https://www.youtube.com/watch?v=Dz6Sg630I8M
+    //SMOOTH SCROLL REACT
     <div className="content">
         <div className ="navbar">
             <ul>
