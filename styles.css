@@ -3,7 +3,6 @@ body{
     color: #2b2b2b;
     padding: 0px;
     margin: 0px;
-    
 }
 
 .navbar{
@@ -42,7 +41,6 @@ a{
     text-decoration: none;
 }
   
-
 .sites {
     display: block;
     height: 400px;
@@ -51,10 +49,10 @@ a{
 }
 
 .content{
-    padding: 0px;
+    /* padding: 0px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    height: 100vh;
+    height: 100vh; */
 }
 
 #__next{
@@ -73,4 +71,21 @@ div.second {
 }
 div.third {
     background-color: rgb(255, 220, 200);
+}
+
+.div-progress{
+    height: 3px;
+    background-color: rgb(118, 160, 236);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.percent-progress{
+    height: 100%;
+    background-color: rgb(54, 119, 240);
+
 }
