@@ -11,7 +11,8 @@ body{
     padding: 10px;
     width:100%;
     height: 20px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(38, 148, 156);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 ul{
@@ -43,7 +44,7 @@ a{
   
 .sites {
     display: block;
-    height: 400px;
+    height: 600px;
     padding: 20px;
     /* margin: 0px; */
 }
@@ -81,11 +82,9 @@ div.third {
     top: 0;
     left: 0;
     z-index: 99;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .percent-progress{
     height: 100%;
     background-color: rgb(54, 119, 240);
-
 }

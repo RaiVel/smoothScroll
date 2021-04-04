@@ -1,15 +1,15 @@
 
-const navBar = () => (
+const navBar = ({ refFirst, refSecond, refThird, goToSection }) => (
     <div className ="navbar">
         <ul>
-            <li>
-                <a href="#first" as="/">1ro</a>
+            <li onClick = {() => goToSection(refFirst)}>
+                <a>1ro</a>
             </li>
-            <li>
-                <a href="#second" as="/">2do</a>
+            <li onClick ={() => goToSection(refSecond)}>
+                <a>2do</a>
             </li>
-            <li>
-                <a href="#third" as="/">3ro</a>
+            <li onClick={() => goToSection(refThird)}>
+                <a>3ro</a>
             </li>
         </ul>
     </div>
