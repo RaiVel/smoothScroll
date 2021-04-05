@@ -9,15 +9,16 @@ const page = () => {
     const { height: heightPage } = useWindowSize();
     const [ visible, setVisiblity ] = useState(false);
     const [ percent, setPercent ] = useState(0);
+
+    const [ divSelected, setDivSelected ] = useState(null);
     
+    const refHome = useRef(null);
     const refFirst = useRef(null);
     const refSecond = useRef(null);
     const refThird = useRef(null);
 
     // browser code
     const goToSection = (component) => {
-        console.log("click goToSection")
-        console.log({component})
         if (typeof window !== "undefined") {   
             window.scrollTo({
                 top: component.current?.offsetTop ? (component.current.offsetTop - 23) : 0,
@@ -26,10 +27,20 @@ const page = () => {
         }
     }
 
+    const determinateSection = (offset) => {
+        if(offset >= refThird.current.offsetTop - 30) return 3;
+        if(offset >= refSecond.current.offsetTop - 30) return 2;
+        if(offset >= refFirst.current.offsetTop - 30) return 1;
+        return null;
+    }
+
     useEffect(() => {
         const {scrollHeight, clientHeight} = document.documentElement;
         const windowsHeight = scrollHeight - clientHeight;
-        setPercent(100 * pageYOffset/windowsHeight)
+        setPercent(100 * pageYOffset/windowsHeight);
+
+        setDivSelected(determinateSection(pageYOffset));
+
     }, [pageYOffset])
 
     return (
@@ -40,18 +51,20 @@ const page = () => {
                 refSecond = {refSecond}
                 refThird = {refThird}
                 goToSection = {goToSection}
+                setDivSelected = {setDivSelected}
+                divSelected = {divSelected}
             />
+            <div className="sites home" ref={refHome}>
+                HOME
+            </div>
             <div className="sites first" ref={refFirst}>
                 Seccion 1
-                <a href="#" as="/">Top</a>
             </div>
             <div className="sites second" ref={refSecond}>
                 Seccion 2
-                <a href="#" as="/">Top</a>
             </div>
             <div className="sites third" ref={refThird}>
                 Seccion 3
-                <a href="#" as="/">Top</a>
             </div>
         </div>
     )
